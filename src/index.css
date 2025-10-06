@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/* === Base Theme Variables === */
+@theme {
+  --color-primary: hsl(15 90% 55%);
+  --color-secondary: hsl(35 85% 60%);
+  --color-accent: hsl(140 60% 45%);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(210 10% 10%);
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* 🌙 Dark theme override (manual class) */
+.dark {
+  --color-primary: hsl(15 85% 65%);
+  --color-secondary: hsl(35 70% 50%);
+  --color-accent: hsl(140 55% 50%);
+  --color-background: hsl(210 15% 8%);
+  --color-foreground: hsl(0 0% 98%);
+}
+
+/* 🧱 Base styles */
+@layer base {
+  body {
+    @apply bg-background text-foreground font-body transition-colors duration-500;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading text-primary;
+  }
+
+  button {
+    @apply font-heading rounded-lg transition-all duration-300;
+  }
+}
