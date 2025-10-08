@@ -21,16 +21,23 @@ function HeroSection() {
   };
 
   return (
-    <section className="bg-background text-foreground min-h-screen flex flex-col items-center justify-center text-center px-6 transition-colors duration-500">
-      <h1 className="text-5xl md:text-6xl font-heading text-primary mb-4">
-        FROM OUR KITCHEN TO YOUR TABLE
-      </h1>
+    <section className="bg-white relative text-foreground min-h-screen flex flex-col items-center justify-center text-center px-6 transition-colors duration-500">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        radial-gradient(circle 600px at 0% 200px, #bbf7d0, transparent),
+        radial-gradient(circle 600px at 100% 200px, #bbf7d0, transparent)
+      `,
+        }}
+      />
+      <div className="absolute z-10 top-1 ">
+        <img sr c="/images/hero_pan_img.webp" className=" h-96" />
+      </div>
 
-      <p className="text-lg md:text-xl text-foreground/80 font-body mb-8 max-w-2xl">
-        Delicious meals crafted with love, now available in light and dark mode.
-      </p>
+      {/* Your Content Here */}
 
-      <button
+      {/* <button
         onClick={toggleTheme}
         className="flex items-center gap-2 px-6 py-3 bg-primary text-white hover:bg-secondary transition-all shadow-md"
       >
@@ -43,7 +50,7 @@ function HeroSection() {
             <FaMoon /> Dark Mode
           </>
         )}
-      </button>
+      </button> */}
     </section>
   );
 }

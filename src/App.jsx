@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import AboutSection from "./sections/AboutSection";
 import FooterSections from "./sections/FooterSections";
-import HeroSection from "./sections/HeroSection";
+import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
