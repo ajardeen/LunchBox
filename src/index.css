@@ -1,25 +1,87 @@
+/* --- 1. Define all @font-face rules --- */
+
+@font-face {
+  font-family: 'OpenRunde';
+  src: url('/fonts/OpenRunde-Regular.woff2') format('woff2'),
+       url('/fonts/OpenRunde-Regular.woff') format('woff');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenRunde';
+  src: url('/fonts/OpenRunde-Medium.woff2') format('woff2'),
+       url('/fonts/OpenRunde-Medium.woff') format('woff');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenRunde';
+  src: url('/fonts/OpenRunde-Semibold.woff2') format('woff2'),
+       url('/fonts/OpenRunde-Semibold.woff') format('woff');
+  font-weight: 600; /* Semibold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenRunde';
+  src: url('/fonts/OpenRunde-Bold.woff2') format('woff2'),
+       url('/fonts/OpenRunde-Bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
-/* === Base Theme Variables === */
+
 @theme {
-  --color-primary: hsl(15 90% 55%);
-  --color-secondary: hsl(35 85% 60%);
-  --color-accent: hsl(140 60% 45%);
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(210 10% 10%);
-  --font-heading: "Montserrat", sans-serif;
+  /* ----------------------
+   * Custom Fonts
+   * ---------------------- */
+  --font-runde: 'OpenRunde', ui-sans-serif, system-ui, sans-serif;
+  
+  /* NOTE: Added Montserrat/Inter to @font-face rules or import URLs */
+  --font-heading: "Montserrat", sans-serif; 
   --font-body: "Inter", sans-serif;
+
+  /* ----------------------
+   * Light Theme Colors (Default)
+   * ---------------------- */
+  /* Main Green (100% match to image) */
+  --color-primary: hsl(135 60% 30%); /* Deep/Forest Green */
+  --color-secondary: hsl(125 70% 40%); /* Slightly Lighter Green */
+  --color-accent: hsl(120 70% 35%); /* The prominent, saturated Green */ 
+
+  /* Background and Text */
+  --color-background: hsl(0 0% 100%); /* Pure White */
+  --color-foreground: hsl(210 10% 10%); /* Near-Black Text */
+  --color-muted: hsl(210 5% 50%); /* Light Gray Text/Borders */
+  
+  /* ----------------------
+   * Custom Theme Utilities
+   * ---------------------- */
+  /* Map Tailwind's default colors to your new custom variables */
+  --color-green: var(--color-accent); /* Use this for utilities like 'bg-green' */
+  --color-gray: var(--color-muted);
 }
 
 /* 🌙 Dark theme override (manual class) */
 .dark {
-  --color-primary: hsl(15 85% 65%);
-  --color-secondary: hsl(35 70% 50%);
-  --color-accent: hsl(140 55% 50%);
-  --color-background: hsl(210 15% 8%);
-  --color-foreground: hsl(0 0% 98%);
+  /* Dark Mode Colors */
+  --color-primary: hsl(135 45% 45%); /* Brighter Primary Green for contrast */
+  --color-secondary: hsl(125 55% 55%);
+  --color-accent: hsl(120 60% 50%); 
+  
+  /* Background and Text for Dark Mode */
+  --color-background: hsl(210 15% 8%); /* Very dark gray/blue */
+  --color-foreground: hsl(0 0% 98%); /* Near-White Text */
+  --color-muted: hsl(210 5% 70%); /* Lighter Gray for Muted text */
 }
-
 /* 🧱 Base styles */
 @layer base {
   body {
