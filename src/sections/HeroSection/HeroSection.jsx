@@ -1,11 +1,11 @@
 import React from "react";
-import RadixButton from "../../components/RadixButton";
+import TailwindButton from "../../components/TailwindButton";
 
 function HeroSection() {
   return (
-    <section className="relative min-h-(calc(100vh-80px)) flex items-center justify-center bg-white px-4 sm:px-8 md:px-10 pt-0">
+    <section className="relative min-h-(calc(100vh-100px)) flex items-center justify-center bg-white px-4 sm:px-4 md:px-5 pt-0">
       {/* Bordered Container */}
-      <div className="relative w-full h-[90vh] max-w-8xl border-2 border-green-800 border-b-green-400 rounded-3xl  overflow-hidden flex flex-col md:flex-row items-center justify-start bg-white">
+      <div className="relative w-full h-[90vh] max-w-8xl border-1 border-green-800 border-b-green-400 rounded-3xl  overflow-hidden flex flex-col md:flex-row items-center justify-start bg-white">
         {/* Background Gradient */}
         <div
           className="absolute inset-0 z-0 opacity-100"
@@ -28,9 +28,9 @@ function HeroSection() {
             Residents, and Seniors in Chennai. Get the authentic, home-taste
             food you crave — without the hassle.
           </p>
-       <RadixButton className="bg-green-600 hover:bg-green-700 text-white">
+       <TailwindButton className="p-40">
   Pre-Order Today!
-</RadixButton>
+</TailwindButton>
 
 
          

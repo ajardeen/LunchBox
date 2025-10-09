@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "@radix-ui/themes/styles.css";
 import "./App.css";
 import AboutSection from "./sections/AboutSection";
-import FooterSections from "./sections/FooterSections";
+import FooterSections from "./sections/FooterSection/FooterSection";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
 import Lenis from "lenis";
@@ -34,22 +34,22 @@ function App() {
         <Theme>
           <Layouts>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // transition={{ duration: 1 }}
           >
             <HeroSection />
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              // initial={{ y: 50, opacity: 0 }}
+              // whileInView={{ y: 0, opacity: 1 }}
+              // transition={{ duration: 0.8 }}
             >
               <AboutSection />
             </motion.div>
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              // initial={{ y: 50, opacity: 0 }}
+              // whileInView={{ y: 0, opacity: 1 }}
+              // transition={{ duration: 0.8 }}
             >
               <FooterSections />
             </motion.div>

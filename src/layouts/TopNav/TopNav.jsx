@@ -22,7 +22,7 @@ function TopNav() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-6 h-[80px] bg-transparent w-full relative z-50">
+    <nav className="flex items-center justify-between p-6 h-[100px] bg-transparent w-full relative z-50">
       {/* Logo */}
       <a href="/" className="flex items-center text-xl font-bold text-green-700">
         <span className="mr-2 text-2xl">🌱</span> LunchBox Legends
