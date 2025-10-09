@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import AboutSection from "./sections/AboutSection";
+import AboutSection from "./sections/AboutSection/AboutSection";
 import FooterSections from "./sections/FooterSections";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
