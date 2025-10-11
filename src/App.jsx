@@ -6,6 +6,7 @@ import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
+import FoodCategory from "./sections/AboutSection/Category";
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
           transition={{ duration: 0.8 }}
           >
           <AboutSection />
+          <FoodCategory/>
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}

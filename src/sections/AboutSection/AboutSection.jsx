@@ -45,12 +45,25 @@ export default function AboutSection() {
             </article>
 
             {/* Arrow (md & up) */}
-            <div className="hidden md:flex items-center" aria-hidden>
-              <svg className="w-16 h-6" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 12h150" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeLinecap="round" />
-                <path d="M140 4l10 8-10 8" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+      <div className="hidden md:flex items-center" aria-hidden>
+  <svg className="w-16 h-6" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M0 12h150"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M140 4l10 8-10 8"
+      fill="none"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</div>
+
 
             {/* Step 2 */}
             <article className="flex-1 flex flex-col items-center text-center">
@@ -67,12 +80,24 @@ export default function AboutSection() {
             </article>
 
             {/* Arrow (md & up) */}
-            <div className="hidden md:flex items-center" aria-hidden>
-              <svg className="w-16 h-6" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 12h150" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeLinecap="round" />
-                <path d="M140 4l10 8-10 8" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+         <div className="hidden md:flex items-center" aria-hidden>
+  <svg className="w-16 h-6" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M0 12h150"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M140 4l10 8-10 8"
+      fill="none"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</div>
 
             {/* Step 3 */}
             <article className="flex-1 flex flex-col items-center text-center">
