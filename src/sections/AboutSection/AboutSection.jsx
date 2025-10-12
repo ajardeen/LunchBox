@@ -1,4 +1,4 @@
-import Category from "./Category";
+
 
 
 export default function AboutSection() {
@@ -254,7 +254,7 @@ export default function AboutSection() {
             </div>
           </div>
         </section>
-          <Category/>
+        
       </div>
     </>
   );

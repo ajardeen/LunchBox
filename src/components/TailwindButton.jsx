@@ -1,9 +1,7 @@
-import React from "react";
-
 function TailwindButton({ children, className }) {
   return (
     <button
-      className={`bg-green text-background hover:bg-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background rounded-full px-6 py-3 text-lg font-light uppercase ${className}`}
+      className={`bg-[color:var(--color-accent)] text-background hover:bg-primary rounded-full px-8 py-3 font-runde text-sm tracking-widest  font-normal uppercase ${className}`}
     >
       {children}
     </button>

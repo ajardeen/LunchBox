@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { Theme } from "@radix-ui/themes";
 import Layouts from "./layouts/Layouts";
 import ServiceSection from "./sections/ServiceSection/ServiceSection";
+import CategorySection from "./sections/CategorySection/CategorySection";
 
 function App() {
   useEffect(() => {
@@ -31,13 +32,16 @@ function App() {
     //
     <>
       {/* Framer Motion transitions between sections */}
-      <ReactLenis root>
-        <Theme>
-          <Layouts>
+      <Layouts>
+        <ReactLenis root>
+          <Theme>
             <motion.div>
               <HeroSection />
               <motion.div>
                 <AboutSection />
+              </motion.div>
+              <motion.div>
+                <CategorySection />
               </motion.div>
               <motion.div>
                 <ServiceSection />
@@ -46,9 +50,9 @@ function App() {
                 <FooterSections />
               </motion.div>
             </motion.div>
-          </Layouts>
-        </Theme>
-      </ReactLenis>
+          </Theme>
+        </ReactLenis>
+      </Layouts>
     </>
   );
 }

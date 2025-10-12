@@ -1,125 +1,117 @@
-import React from "react";
+import { IoLocationSharp } from "react-icons/io5";
 import TailwindButton from "../../components/TailwindButton";
+import { FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 function FooterSection() {
-  // Define the main green color variable for clarity and easy reuse
-  const accentColor = "var(--color-accent)";
-
   return (
-    <div className="flex flex-col min-h-screen font-body">
-      {/* ========================================================
-        TOP HALF: Hero Section (Matching the top 50vh of the image)
-        ======================================================== 
-      */}
+    <div className="flex flex-col font-body w-full">
+      {/* ============================
+        TOP SECTION (Hero)
+      ============================ */}
       <div
-        className="z-10 h-[40vh] flex items-center bg-gray-50 relative"
+        className=" flex flex-col lg:flex-row items-center justify-center bg-gray-50 w-full min-h-[300px] text-white sticky top- z-10"
         style={{
-          // Set a light background for the text area and use a placeholder image for the right side
-          backgroundImage: "url('/images/footerbg.png",
-          backgroundSize: "100%",
+          backgroundImage: "url('/images/footerbg.png')",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       >
-        {/* overlay  */}
-        <div className="absolute inset-0 bg-black/20"/>
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex ">
-          {/* Left Side: Text and Button (Taking roughly 50% width) */}
-          <div className="w-full lg:w-1/2 p-4 ">
-            {/* Title */}
-            <h1 className="text-3xl  font-heading font-bold mb-4 leading-tight text-foreground">
-              CUSTOMIZE DELIVERY MEAL <br />
-              FOR A HEALTHY LIFESTYLE
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Content Wrapper */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 lg:py-0 flex flex-col lg:flex-row items-center">
+          {/* Left Section */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left p-4">
+            <h1 className="text-2xl sm:text-3xl font-heading font-bold mb-4 leading-snug text-white">
+              CUSTOMIZE DELIVERY MEAL <br /> FOR A HEALTHY LIFESTYLE
             </h1>
-
-            {/* Body Text */}
-            <p className="text-white max-w-lg mb-8 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo.
+            <p className="text-white text-sm sm:text-base mb-6 max-w-md mx-auto lg:mx-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-
-            {/* Button */}
-            <TailwindButton>GET 50% OFF TODAY</TailwindButton>
-          </div>
-
-          {/* Right Side: Image Placeholder (Taking roughly 50% width) */}
-          {/* NOTE: The actual image is complex. This uses padding to push the left content to the side */}
-          <div className="hidden lg:block lg:w-1/2 p-4 relative">
-            {/* This is where the food image would be. 
-              The padding and background color of the main div simulate the layout.
-            */}
-          </div>
-        </div>
-      </div>
-
-      {/* ========================================================
-        BOTTOM HALF: Footer Section (Matching the image)
-        ======================================================== 
-      */}
-      <div
-        className="sticky bottom-0 z-0 bg-[var(--color-accent)] text-white h-[60vh] flex items-center justify-center"
-        style={{ flexShrink: 0 }} // Ensure the footer doesn't shrink
-      >
-        {/* Footer Content Wrapper - Centering the content */}
-        <div className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
-          {/* Logo and Navigation Section */}
-          <div className="flex flex-col items-center justify-center text-center">
-            {/* Logo/Brand Name (Using a placeholder leaf icon) */}
-            <div className="flex items-center space-x-2 mb-6">
-              <img
-                src="/images/logo.png"
-                className="w-96 h-40 object-contain"
-              />
+            <div className="flex justify-center lg:justify-start">
+              <TailwindButton>GET 50% OFF TODAY</TailwindButton>
             </div>
-
-            {/* Navigation Links */}
-            <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-8 text-sm font-medium mb-6">
-              <a href="#" className="hover:opacity-80 transition-opacity p-2">
-                About Us
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity p-2">
-                Category
-              </a>
-              {/* Food & Drink link with chevron */}
-              <div className="relative group">
-                <a
-                  href="#"
-                  className="flex items-center hover:opacity-80 transition-opacity p-2"
-                >
-                  Food & Drink
-                  <svg
-                    className="ml-1 w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <a href="#" className="hover:opacity-80 transition-opacity p-2">
-                Resources
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity p-2">
-                Gallery
-              </a>
-            </nav>
           </div>
 
-          {/* Copyright Notice */}
-          <div className="text-center text-sm pt-2 border-t border-white border-opacity-30 mt-4">
-            Copyrighted © 2024 LunchBox Legends
+          {/* Right Section */}
+          <div className="hidden lg:block w-1/2 p-4 relative">
+            {/* Reserved for image or extra layout */}
           </div>
         </div>
       </div>
+
+      {/* ============================
+        FOOTER SECTION
+      ============================ */}
+      <footer className="bg-[var(--color-accent)] text-white w-full sticky bottom-0 z-0 min-h-96 flex flex-col items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+            src="/images/logo.png"
+            alt="LunchBox Legends Logo"
+            className="w-48 sm:w-64 md:w-80 h-auto mb-6"
+          />
+
+          {/* Navigation Links */}
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm font-medium mb-6">
+            <a href="#" className="hover:opacity-80 transition-opacity">
+              About Us
+            </a>
+            <a href="#" className="hover:opacity-80 transition-opacity">
+              Category
+            </a>
+            <a
+              href="#"
+              className="flex items-center hover:opacity-80 transition-opacity"
+            >
+              Food & Drink
+              <svg
+                className="ml-1 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" className="hover:opacity-80 transition-opacity">
+              Resources
+            </a>
+            <a href="#" className="hover:opacity-80 transition-opacity">
+              Gallery
+            </a>
+          </nav>
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-3 sm:gap-8 text-sm mb-6">
+            <div className="flex items-center gap-2">
+              <IoLocationSharp />
+              <span>123 Healthy Street, Food City, India</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaPhone />
+              <span>contact@lunchboxlegends.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdEmail />
+              <span>+91 98765 43210</span>
+            </div>
+          </div>
+          {/* Copyright */}
+          <div className="text-center text-xs sm:text-sm pt-2 border-t border-white border-opacity-30 mt-4 w-full">
+            © 2024 LunchBox Legends. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

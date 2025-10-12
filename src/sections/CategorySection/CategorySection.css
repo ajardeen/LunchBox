@@ -1,0 +1,10 @@
+.packingimg1 {
+  background-image: url("/images/packingimg1.png");
+  background-size: cover;
+  background-position: center;
+}
+.packingimg2 {
+  background-image: url("/images/packingimg2.png");
+  background-size: cover;
+  background-position: center;
+}
