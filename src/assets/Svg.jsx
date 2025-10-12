@@ -3,22 +3,35 @@ export const CustomizeMeal = () => {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
       <path
         d="M10 30 Q32 54 54 30"
-        stroke="white"
-        stroke-width="3"
+        // Changed stroke to use the CSS variable
+        stroke="var(--color-primary)" 
+        strokeWidth="3" // Use camelCase for strokeWidth in JSX
         fill="none"
       />
-      <path d="M16 46 H48" stroke="white" stroke-width="3" />
+      <path 
+        d="M16 46 H48" 
+        // Changed stroke to use the CSS variable
+        stroke="var(--color-primary)" 
+        strokeWidth="3" // Use camelCase for strokeWidth in JSX
+      />
 
       <line
         x1="20"
         y1="16"
         x2="44"
         y2="16"
-        stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
+        // Changed stroke to use the CSS variable
+        stroke="var(--color-primary)" 
+        strokeWidth="3" // Use camelCase for strokeWidth in JSX
+        strokeLinecap="round" // Use camelCase for strokeLinecap in JSX
       />
-      <circle cx="32" cy="16" r="4" fill="white" />
+      <circle 
+        cx="32" 
+        cy="16" 
+        r="4" 
+        // Changed fill to use the CSS variable
+        fill="var(--color-primary)" 
+      />
     </svg>
   );
 };
@@ -144,6 +157,8 @@ export const GultenSVG = () => {
     </svg>
   );
 };
+
+
 export const JuiceSVg = () => {
   return (
     <svg
@@ -159,6 +174,39 @@ export const JuiceSVg = () => {
         strokeWidth="2"
         d="M12 3v1m0 16v1m9-9h1M3 12H2m15.39-4.81l.71-.71M5.89 18.11l-.71.71m-.71-.71l.71.71M18.11 5.89l-.71-.71"
       ></path>
+    </svg>
+  );
+};
+
+
+export const ArrowSvg = () => {
+  return (
+      <svg
+      // Increased width using Tailwind CSS class
+      className="w-48 h-6" 
+      // Increased viewBox width to accommodate a larger size
+      viewBox="0 0 400 24" 
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        // Extended the line length to match the new width
+        d="M0 12h350"
+        // Increased strokeWidth for a bolder line
+        stroke="white" 
+        strokeWidth="4" 
+        strokeLinecap="round"
+      />
+      <path
+        // Adjusted the arrow's x-coordinates to be near the end of the new line
+        d="M340 4l10 8-10 8"
+        fill="none"
+        // Increased strokeWidth for a bolder arrow
+        stroke="white" 
+        strokeWidth="4" 
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };

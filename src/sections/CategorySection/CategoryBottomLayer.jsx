@@ -1,7 +1,8 @@
 import { FaPlateWheat } from "react-icons/fa6";
 import { GiBerriesBowl, GiWheat, GiMilkCarton } from "react-icons/gi";
 import { TbBottleFilled } from "react-icons/tb";
-import TailwindButton from "../../components/TailwindButton";
+import Galary from "../AboutSection/Galary";
+
 const CategoryBottomLayer = () => {
   const categories = [
     {
@@ -57,30 +58,8 @@ const CategoryBottomLayer = () => {
         </div>
       </section>
 
-      <section className=" px-5 lg:py-16 lg:px-16">
-        <button className="bg-background font-runde text-accent uppercase text-sm font-medium px-8 py-2 rounded-3xl border border-accent shadow tracking-[0.4em]">
-          Gallery
-        </button>
-
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6">
-          <h2 className="text-4xl md:text-5xl font-runde font-bold uppercase  text-foreground leading-tight mb-8 md:mb-0">
-            From Our Kitchen To <br /> Your Table
-          </h2>
-          <div className="md:w-1/2">
-            <h3 className="text-xl font-heading text-[#000] mb-4">
-              NOURISH YOUR BODY, NOURISH YOUR LIFE
-            </h3>
-            <p className="text-muted leading-relaxed mb-6">
-              Discover the transformative power of food. By making conscious
-              choices about what you eat, you can improve your energy levels,
-              boost your mood, and enhance your overall quality of life.
-            </p>
-            <TailwindButton>
-              Get Started
-            </TailwindButton>
-          </div>
-        </div>
-      </section>
+  
+      <Galary />
     </div>
   );
 };

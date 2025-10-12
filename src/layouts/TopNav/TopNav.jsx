@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { ChevronDownIcon, HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
 
@@ -25,7 +25,8 @@ function TopNav() {
     <nav className="flex items-center justify-between p-6 h-[100px] bg-transparent w-full relative z-50">
       {/* Logo */}
       <a href="/" className="flex items-center text-xl font-bold text-green-700">
-        <span className="mr-2 text-2xl">🌱</span> LunchBox Legends
+        {/* <span className="mr-2 text-2xl">🌱</span> LunchBox Legends */}
+        <img src="./images/logo.png" alt="logoimg" className='w-38' />
       </a>
 
       {/* Desktop Nav */}

@@ -1,4 +1,3 @@
-import React from "react";
 import TailwindButton from "../../components/TailwindButton";
 
 function HeroSection() {
