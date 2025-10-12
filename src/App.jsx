@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "@radix-ui/themes/styles.css";
 import "./App.css";
-import AboutSection from "./sections/AboutSection";
+import AboutSection from "./sections/AboutSection/AboutSection";
 import FooterSections from "./sections/FooterSection/FooterSection";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
@@ -36,9 +36,9 @@ function App() {
           <Layouts>
             <motion.div>
               <HeroSection />
-              {/* <motion.div>
+              <motion.div>
                 <AboutSection />
-              </motion.div> */}
+              </motion.div>
               <motion.div>
                 <ServiceSection />
               </motion.div>
