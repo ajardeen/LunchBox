@@ -1,11 +1,15 @@
 import { useEffect } from "react";
+import "@radix-ui/themes/styles.css";
 import "./App.css";
 import AboutSection from "./sections/AboutSection";
-import FooterSections from "./sections/FooterSections";
+import FooterSections from "./sections/FooterSection/FooterSection";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import { ReactLenis } from "lenis/react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
+import { Theme } from "@radix-ui/themes";
+import Layouts from "./layouts/Layouts";
+import ServiceSection from "./sections/ServiceSection/ServiceSection";
 
 function App() {
   useEffect(() => {
@@ -24,34 +28,28 @@ function App() {
   }, []);
 
   return (
-    // 
+    //
     <>
-    
       {/* Framer Motion transitions between sections */}
       <ReactLenis root>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        >
-        <HeroSection />
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          >
-          <AboutSection />
-        </motion.div>
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          >
-          <FooterSections />
-        </motion.div>
-      </motion.div>
-    </ReactLenis>
-          </>
+        <Theme>
+          <Layouts>
+            <motion.div>
+              <HeroSection />
+              {/* <motion.div>
+                <AboutSection />
+              </motion.div> */}
+              <motion.div>
+                <ServiceSection />
+              </motion.div>
+              <motion.div>
+                <FooterSections />
+              </motion.div>
+            </motion.div>
+          </Layouts>
+        </Theme>
+      </ReactLenis>
+    </>
   );
 }
 

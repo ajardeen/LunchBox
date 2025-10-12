@@ -55,7 +55,7 @@
   /* Main Green (100% match to image) */
   --color-primary: hsl(135 60% 30%); /* Deep/Forest Green */
   --color-secondary: hsl(125 70% 40%); /* Slightly Lighter Green */
-  --color-accent: hsl(120 70% 35%); /* The prominent, saturated Green */ 
+  --color-accent: #007114; /* The prominent, saturated Green */ 
 
   /* Background and Text */
   --color-background: hsl(0 0% 100%); /* Pure White */
