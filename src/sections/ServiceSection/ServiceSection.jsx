@@ -56,21 +56,21 @@ function ServiceSection() {
 
       <div className="relative h-[600px] sm:h-[700px] md:h-[600px] w-full flex items-end justify-center overflow-hidden pt-20">
  
-        <div className="absolute bottom-0 w-[250px] sm:w-[400px] md:w-[500px] h-[125px] sm:h-[200px] md:h-[250px] border-2 sm:border-3 border-dotted border-[color:var(--color-secondary)] rounded-t-full border-b-0">
-          <span className="absolute -top-2 left-[20%] text-[color:var(--color-secondary)] font-semibold text-xs sm:text-sm md:text-base">
+        <div className="absolute bottom-0 w-[250px] sm:w-[400px] md:w-[500px] h-[125px] sm:h-[200px] md:h-[250px] border-1 sm:border-1 border-dotted border-[#000] rounded-t-full border-b-0">
+          <span className="absolute -top-2 left-[20%] text-[#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
             5 km
           </span>
-          <span className="absolute -top-2 right-[20%] text-[color:var(--color-secondary)] font-semibold text-xs sm:text-sm md:text-base">
+          <span className="absolute -top-2 right-[20%] text-[#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
             Place 2 
           </span>
         </div>
 
     
-        <div className="absolute bottom-0 w-[175px] sm:w-[300px] md:w-[350px] h-[87px] sm:h-[150px] md:h-[175px] border-2 sm:border-3 border-[color:var(--color-accent)] rounded-t-full border-b-0">
-          <span className="absolute -top-4 left-[25%] text-[color:var(--color-accent)] font-semibold text-xs sm:text-sm md:text-base">
+        <div className="absolute bottom-0 w-[175px] sm:w-[300px] md:w-[350px] h-[87px] sm:h-[150px] md:h-[175px] border-1  border-[#000] z-10 rounded-t-full border-b-0">
+          <span className="absolute -top-4 left-[25%] tex#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
             2 km
           </span>
-          <span className="absolute -top-4 right-[25%] text-[color:var(--color-accent)] font-semibold text-xs sm:text-sm md:text-base">
+          <span className="absolute -top-4 right-[25%] tex#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
             Place 1
           </span>
         </div>

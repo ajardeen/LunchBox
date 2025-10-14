@@ -61,12 +61,12 @@ export default function Galary() {
   return (
     <section className="py-8 p-10">
       {/* Header Content */}
-      <button className="bg-background font-runde tracking-[0.2em] uppercase text-sm font-medium px-10 py-2 rounded-3xl  border-accent border-2 shadow ">
+      <div className="bg-background w-fit font-runde tracking-[0.2em] uppercase text-sm font-medium px-10 py-2 rounded-3xl border-accent text-accent border-2 shadow ">
         Gallery
-      </button>
+      </div>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6">
-        <h2 className="text-4xl md:text-5xl font-runde font-bold uppercase  text-foreground leading-tight mb-8 md:mb-0">
+        <h2 className="text-4xl md:text-5xl font-runde font-bold uppercase text-foreground leading-tight mb-8 md:mb-0">
           From Our Kitchen To <br /> Your Table
         </h2>
         <div className="md:w-1/2">

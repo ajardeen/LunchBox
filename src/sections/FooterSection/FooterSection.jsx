@@ -51,7 +51,7 @@ function FooterSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center justify-center">
           {/* Logo */}
           <img
-            src="/images/logo.png"
+            src="/images/LunchBoxLegends.svg"
             alt="LunchBox Legends Logo"
             className="w-48 sm:w-64 md:w-80 h-auto mb-6"
           />

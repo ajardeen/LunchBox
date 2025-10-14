@@ -26,7 +26,7 @@ function TopNav() {
       {/* Logo */}
       <a href="/" className="flex items-center text-xl font-bold text-green-700">
         {/* <span className="mr-2 text-2xl">🌱</span> LunchBox Legends */}
-        <img src="./images/logo.png" alt="logoimg" className='w-38' />
+        <img src="./images/LunchBoxLegends.svg" alt="logoimg" className='w-38' />
       </a>
 
       {/* Desktop Nav */}
