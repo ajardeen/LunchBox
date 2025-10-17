@@ -2,10 +2,37 @@ import { IoLocationSharp } from "react-icons/io5";
 import TailwindButton from "../../components/TailwindButton";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { useLenis } from "lenis/react";
+
+const navLinks = [
+  { name: "Home", href: "#herosection" },
+  { name: "Category", href: "#categorysection" },
+  { name: "About us", href: "#aboutussection" },
+  { name: "Contact", href: "#footersection" },
+];
 
 function FooterSection() {
+  const lenis = useLenis();
+
+  const handleSmoothScroll = (e, target) => {
+    e.preventDefault();
+    if (lenis && target) {
+      const offset =
+        target === "#herosection"
+          ? -150
+          : target === "#footersection"
+          ? 200
+          : -90;
+      lenis.scrollTo(target, { offset, duration: 1.2 });
+    } else {
+      // fallback
+      const el = document.querySelector(target);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="flex flex-col font-body w-full">
+    <div id="footersection" className="flex flex-col font-body w-full">
       {/* ============================
         TOP SECTION (Hero)
       ============================ */}
@@ -25,15 +52,20 @@ function FooterSection() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 lg:py-0 flex flex-col lg:flex-row items-center">
           {/* Left Section */}
           <div className="w-full lg:w-1/2 text-center lg:text-left p-4">
-            <h1 className="text-2xl sm:text-3xl font-heading font-bold mb-4 leading-snug text-white">
-              CUSTOMIZE DELIVERY MEAL <br /> FOR A HEALTHY LIFESTYLE
+            <h1 className="text-3xl sm:text-4xl font-heading font-bold mb-4 leading-tight text-white">
+              Ready for Your <br /> Legendary Lunch?
             </h1>
             <p className="text-white text-sm sm:text-base mb-6 max-w-md mx-auto lg:mx-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Be the first to know when we launch in Chennai. Sign up for
+              exclusive early-bird offers and get ready to enjoy authentic,
+              home-cooked meals delivered right to you.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <TailwindButton>GET 50% OFF TODAY</TailwindButton>
+              <TailwindButton
+                onClick={(e) => handleSmoothScroll(e, "#leadcapturesection")}
+              >
+                Register now
+              </TailwindButton>
             </div>
           </div>
 
@@ -58,53 +90,42 @@ function FooterSection() {
 
           {/* Navigation Links */}
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm font-medium mb-6">
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              About Us
-            </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              Category
-            </a>
-            <a
-              href="#"
-              className="flex items-center hover:opacity-80 transition-opacity"
-            >
-              Food & Drink
-              <svg
-                className="ml-1 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.href)}
+                className="hover:opacity-80 transition-opacity cursor-pointer"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              Resources
-            </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              Gallery
-            </a>
+                {link.name}
+              </a>
+            ))}
           </nav>
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-3 sm:gap-8 text-sm mb-6">
-            <div className="flex items-center gap-2">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=123+Healthy+Street,+Food+City,+India"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
               <IoLocationSharp />
               <span>123 Healthy Street, Food City, India</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaPhone />
-              <span>contact@lunchboxlegends.com</span>
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            <a
+              href="mailto:contact@lunchboxlegends.com"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
               <MdEmail />
+              <span>contact@lunchboxlegends.com</span>
+            </a>
+            <a
+              href="tel:+919876543210"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
+              <FaPhone />
               <span>+91 98765 43210</span>
-            </div>
+            </a>
           </div>
           {/* Copyright */}
           <div className="text-center text-xs sm:text-sm pt-2 border-t border-white border-opacity-30 mt-4 w-full">

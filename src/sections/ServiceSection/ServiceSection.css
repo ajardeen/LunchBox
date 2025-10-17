@@ -1,64 +1,7 @@
-/* Ensures no unwanted animation or movement */
-* {
-  box-sizing: border-box;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-/* Signal wave animation */
-@keyframes waveExpand {
-  0% {
-    transform: scale(0.4);
-    opacity: 0.5;
-  }
-  70% {
-    transform: scale(2.5);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(3.5);
-    opacity: 0;
-  }
-}
-
-.signal-wave {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 97px solid var(--color-secondary);
-  border-radius: 100%;
-  animation: waveExpand 5s ease-out infinite;
-  transform-origin: center;
-  bottom: -146px;
-}
-
-.signal-wave.delay-1 {
-  border-color: var(--color-secondary);
-  animation-delay: 1.5s;
-}
-
-.signal-wave.delay-2 {
-  border-color: var(--color-secondary);
-  animation-delay: 3s;
-}
-
-/* Smooth rendering */
-.signal-wave {
-  will-change: transform, opacity;
-}
-.signal-wave {
-  /* filter: drop-shadow(0 0 8px #fff); */
-}
-
-.bg-pattern{
-    background-color: #e5e5f7;
-opacity: 0.8;
-background-image: radial-gradient(var(--color-secondary) 0.5px, #ffffff 0.5px);
-background-size: 10px 10px;
+/* Background Pattern: Reverted to the user's original style */
+.bg-pattern {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(var(--color-secondary) 0.5px, #ffffff 0.5px);
+  background-size: 10px 10px;
 }

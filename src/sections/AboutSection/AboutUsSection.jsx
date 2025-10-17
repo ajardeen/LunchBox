@@ -1,4 +1,4 @@
-import TailwindButton from '../../components/TailwindButton';
+import TailwindButton from "../../components/TailwindButton";
 
 const AboutUsSection = () => {
   return (
@@ -10,45 +10,66 @@ const AboutUsSection = () => {
           </span>
 
           <h1 className="text-4xl sm:text-4xl lg:text-4xl font-bold tracking-tight leading-none mb-6 text-foreground">
-            CULTIVATING A HEALTHIER, HAPPIER YOU
+            OUR BELIEF: QUALITY FUEL, QUALITY LIFE.
           </h1>
 
-          <p className="text-base font-normal mb-10 max-w-md text-muted">
-            We believe that healthy eating shouldn't be a chore. We're passionate about creating
-            delicious, nutritious meals that fuel your body and soul, all while making your life easier.
+          <p className="text-base font-normal lg:mb-10 max-w-md text-muted">
+            We see food as more than just sustenance—it's the foundation of your
+            energy, focus, and happiness. We are dedicated to creating a
+            subscription experience that delivers authentic, hygienic, and
+            home-cooked goodness right to you. Our goal is simple: to make
+            healthy eating a joyful, consistent part of your busy Chennai life.
           </p>
 
-           <TailwindButton>
-            GET STARTED
-            </TailwindButton>
+          {/* <TailwindButton>GET STARTED</TailwindButton> */}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8  pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 lg:gap-y-2 gap-x-8  lg:pt-4">
           <div>
-            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">FRESH INGREDIENTS</h3>
+            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">
+              FARM-TO-LUNCHBOX FRESHNESS
+            </h3>
             <p className="text-sm font-normal text-muted">
-              We source our ingredients locally whenever possible, ensuring peak freshness and supporting our community farmers.
+              We believe the best meals start with the best produce. We source
+              our ingredients locally whenever possible, ensuring peak flavor
+              and supporting Chennai's community farmers. This dedication
+              guarantees a difference you can taste.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">CONVENIENT DELIVERY</h3>
+            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">
+              SEAMLESS DAILY DELIVERY
+            </h3>
             <p className="text-sm font-normal text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              Forget the hassle of packing, ordering, or rushing out. Your
+              authentic, home-cooked lunch arrives at your doorstep or office—on
+              time, every time. Our subscription model is built for your busy
+              schedule, giving you one less thing to worry about.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">DELICIOUS & NUTRITIOUS MEALS</h3>
+            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">
+              AUTHENTIC TASTE, PERFECTLY BALANCED
+            </h3>
             <p className="text-sm font-normal text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              We've mastered the art of making healthy food taste like home. Our
+              chefs craft meals that are rich in authentic flavors (சுவை) while
+              ensuring they meet the nutritional standards (ஆரோக்யம்) that keep
+              you energized and focused all afternoon.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">CUSTOMIZABLE PLANS</h3>
+            <h3 className="text-lg font-bold mb-3 text-foreground uppercase">
+              FLEXIBLE PLANS TO FIT YOUR LIFE
+            </h3>
             <p className="text-sm font-normal text-muted">
-              We offer a variety of customizable plans to accommodate various dietary restrictions and preferences.
+              No two legends are the same. We offer a variety of customizable
+              subscription plans to accommodate your dietary restrictions,
+              preferences, and schedule. Need a meal only three days a week?
+              Vegetarian options? We have a plan designed just for you.
             </p>
           </div>
         </div>
