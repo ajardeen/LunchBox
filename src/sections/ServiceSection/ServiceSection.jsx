@@ -1,95 +1,108 @@
-import { MdOutlineDeliveryDining } from "react-icons/md";
-import "./ServiceSection.css";
+import { MdOutlineDeliveryDining, MdOutlineMyLocation } from "react-icons/md";
+import "./ServiceSection.css"; 
+// Assuming 'var(--color-secondary)' is your main brand color (e.g., Green)
+
+const servedLocations = [
+  "Injambakkam",
+  "Kottivakkam",
+  "Neelangarai",
+  "Pallavakkam",
+  "Perungudi",
+  "Sholinganallur",
+  "Taramani",
+  "Thiruvanmiyur",
+];
 
 function ServiceSection() {
   return (
-    <section className="bg-pattern relative w-full h-[800px] sm:h-[700px] md:h-[600px] mb-20 flex flex-col items-center justify-end overflow-hidden bg-[color:var(--color-background)] text-[color:var(--color-foreground)]">
-      {/* Section Heading and Info */}
-      <div className="absolute top-12 left-0 w-full h-full text-left px-4 sm:px-6 md:px-12">
-        <div className="relative w-full h-full">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-heading font-semibold text-[#000] mb-3">
-            Our Service Coverage
+    // Adjusted height/padding as the large visualization is removed
+    <section 
+      className="bg-pattern relative w-full py-5 h-full lg:min-h-[80vh] flex flex-col  gap-30 overflow-hidden"
+    >
+      
+      {/* Container for Layout */}
+      <div className="container lg:h-[70vh] mx-auto px-4 md:px-12 flex flex-col  items-center">
+        <div className="text-center">
+          {/* Main Heading */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-heading font-bold text-gray-800 mb-4">
+            Our Service Zones
           </h2>
-          <p className="text-sm   font-body text-[color:var(--color-muted)] mb-4 max-w-xl">
-            We’re expanding our trusted local services to communities near you —
-            bringing quality, speed, and reliability right to your doorstep.
+          
+          
+          {/* Tagline */}
+          <p className="text-base font-body text-gray-600 mb-8 max-w-xl">
+            We’re expanding our trusted local service from our kitchen to you,
+            ensuring **fresh, home-style meals** with unmatched speed and reliability.
           </p>
 
-          {/* Bottom left info box */}
-          <div className="mt-3 lg:absolute bottom-24 sm:bottom-20 left-0 w-[90%] sm:w-80 border p-4 sm:p-5 rounded-2xl bg-white shadow-md">
-            <p className="text-gray-700 text-sm sm:text-base">
-              Currently serving areas within{" "}
-              <span className="text-[color:var(--color-secondary)] font-semibold flex gap-2 sm:gap-3 justify-center items-center w-fit">
-                <MdOutlineDeliveryDining color="var(--color-secondary)" />5 km radius
-              </span>{" "}
-              expanding soon to reach more people craving authentic, home-style
-              cooking.
+          {/* Actionable Pincode/Address Check (CTA) */}
+          {/* <div className="mb-10 p-5 rounded-xl bg-white shadow-xl max-w-sm">
+            <p className="font-semibold text-lg mb-3 text-gray-700">
+              Check Your Delivery Availability
+            </p>
+            <div className="flex space-x-2">
+              <input 
+                type="text"
+                placeholder="Enter Pincode or Locality..."
+                className="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[color:var(--color-secondary)] focus:border-transparent text-sm"
+              />
+              <button 
+                className="flex items-center justify-center p-3 bg-[color:var(--color-secondary)] text-white rounded-lg hover:bg-[color:var(--color-primary)] transition-colors text-sm font-semibold shadow-md"
+              >
+                <MdOutlineDeliveryDining className="w-5 h-5 mr-1" /> Check
+              </button>
+            </div>
+          </div> */}
+
+
+        </div>
+
+        {/* ====================================================================== 
+            1. TEXT CONTENT & CTA (Left/Top)
+            ====================================================================== */}
+        <div className="flex flex-col justify-center items-center md:flex md:flex-row md:gap-5 lg:justify-between md:items-center w-full lg:px-30">
+
+          {/* Local Kitchen Info Box */}
+          <div className=" p-5 h-fit rounded-2xl bg-white shadow-lg border-l-4 border-[color:var(--color-secondary)] max-w-sm">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              <MdOutlineMyLocation className="inline w-5 h-5 mr-2 text-[color:var(--color-secondary)]"/>
+              Our dedicated kitchen is buzzing in{" "}
+              <span className="font-bold text-[color:var(--color-secondary)]">
+                Injambakkam
+              </span>
+              . We focus on delivering fresh, home-style meals to the surrounding
+              neighborhoods fast.
             </p>
           </div>
-
-          {/* Top right info box */}
-          <div className=" z-10 mt-5 lg:absolute top-0 right-0  sm:w-72 md:w-60 border p-1 sm:p-5 rounded-2xl bg-white shadow-md text-center">
-            <p className="font-semibold uppercase mb-3 text-lg sm:text-base">
-              Currently Serving
+        {/* ====================================================================== 
+            2. ZONE LIST (Right/Bottom)
+            ====================================================================== */}
+        <div className="flex my-5 justify-start lg:justify-end">
+          
+          {/* List of Zones */}
+          <div className="w-full max-w-md p-6 bg-white rounded-xl shadow-2xl">
+            <p className="font-bold uppercase mb-4 text-sm tracking-wider text-gray-800 border-b pb-2">
+              Currently Serving These Localities
             </p>
-            <div className="flex flex-col gap-2 sm:gap-3 text-left px-3">
-              {["Taramani", "Velachery", "OMR", "Perungudi", "Thoraipakkam"].map(
-                (item, index) => (
-                  <p
-                    key={index}
-                    className="mb-1 text-[#000] text-sm cursor-pointer hover:text-[color:var(--color-secondary)]"
-                  >
-                    {item}
-                  </p>
-                )
-              )}
-            </div>
-            <p className="italic mt-3 sm:mt-4 text-[color:var(--color-secondary)] text-sm sm:text-base">
+            <ul className="grid grid-cols-2 gap-y-2 gap-x-4 text-left text-base text-gray-700">
+              {servedLocations.map((item) => (
+                <li 
+                  key={item} 
+                  className="flex items-center hover:text-[color:var(--color-secondary)] transition-colors"
+                >
+                  <span className="text-[color:var(--color-secondary)] mr-2">•</span> {item}
+                </li>
+              ))}
+            </ul>
+            <p className="italic mt-4 text-[color:var(--color-secondary)] text-base font-semibold">
               More areas coming soon!
             </p>
           </div>
         </div>
+        </div>
+
+        
       </div>
-
-      {/* Coverage Visualization */}
-     
-
-      <div className="relative h-[600px] sm:h-[700px] md:h-[600px] w-full flex items-end justify-center overflow-hidden pt-20">
- 
-        <div className="absolute bottom-0 w-[250px] sm:w-[400px] md:w-[500px] h-[125px] sm:h-[200px] md:h-[250px] border-1 sm:border-1 border-dotted border-[#000] rounded-t-full border-b-0">
-          <span className="absolute -top-2 left-[20%] text-[#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
-            5 km
-          </span>
-          <span className="absolute -top-2 right-[20%] text-[#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
-            Place 2 
-          </span>
-        </div>
-
-    
-        <div className="absolute bottom-0 w-[175px] sm:w-[300px] md:w-[350px] h-[87px] sm:h-[150px] md:h-[175px] border-1  border-[#000] z-10 rounded-t-full border-b-0">
-          <span className="absolute -top-4 left-[25%] tex#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
-            2 km
-          </span>
-          <span className="absolute -top-4 right-[25%] tex#000] z-10 font-semibold text-xs sm:text-sm md:text-base">
-            Place 1
-          </span>
-        </div>
-
-     
-        <div className="absolute bottom-[40px] sm:bottom-[50px] z-0 flex justify-center items-center">
-          <div className="signal-wave delay-0"></div>
-          <div className="signal-wave delay-1"></div>
-          <div className="signal-wave delay-2"></div>
-        </div>
-
-        <img
-          src="/images/shop.png"
-          alt="shop"
-          className="w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 object-contain z-10 "
-        />
-      </div>
-     
-        {/* <p className="absolute -bottom-1 z-10">LBL</p> */}
     </section>
   );
 }

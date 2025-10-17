@@ -78,13 +78,13 @@ export default function Galary() {
             choices about what you eat, you can improve your energy levels,
             boost your mood, and enhance your overall quality of life.
           </p>
-          <TailwindButton>Get Started</TailwindButton>
+{/*           <TailwindButton>Get Started</TailwindButton> */}
         </div>
       </div>
 
       {/* --- Refined Unique Image Grid --- */}
       {/* The grid is 3 columns wide and 2 rows tall */}
-      <div className="mt-12 grid grid-cols-3 grid-rows-6   gap-4  px-2 auto-rows-fr h-[300px] lg:h-[600px]">
+      <div className="mt-12 grid grid-cols-3 lg:grid-cols-[repeat(3,300px)] grid-rows-6 justify-center gap-4  px-2 auto-rows-fr h-[300px] lg:h-[600px]">
         {displayImages.map((image, index) => (
           <div
             key={index}

@@ -25,20 +25,20 @@ const CategoryBottomLayer = () => {
       title: "GLUTEN FREE",
       description: "Tasty But Suit Your Diet",
     },
-    {
-      icon: <TbBottleFilled color="var(--color-accent)" size={25} />,
-      title: "JUICE",
-      description: "Fresh Juice Add On",
-    },
+    // {
+    //   icon: <TbBottleFilled color="var(--color-accent)" size={25} />,
+    //   title: "JUICE",
+    //   description: "Fresh Juice Add On",
+    // },
   ];
   return (
     <div className=" bg-transparent font-body">
-      <section className="py-16 text-center flex flex-col items-center justify-center">
+      <section className="py-6 lg:py-16 text-center flex flex-col items-center justify-center">
         <div className="bg-background w-fit  font-runde shadow text-accent uppercase text-sm font-medium px-8  py-2 rounded-3xl border border-accent tracking-[0.4em]">
           Category Us
         </div>
         <h2 className="text-2xl uppercase md:text-4xl font-heading font-bold text-foreground leading-tight mt-6 md:mb-16 px-10 md:px-0">
-          Quench Your Thirst, Satisfy <br className="hidden md:block"/> Your Hunger
+          YOUR CRAVINGS. YOUR CHOICES. <br className="hidden md:block"/>YOUR LEGEND
         </h2>
 
         <div className="w-full flex flex-wrap justify-center md:justify-around mt-12 gap-8">

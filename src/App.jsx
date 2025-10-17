@@ -11,6 +11,7 @@ import { Theme } from "@radix-ui/themes";
 import Layouts from "./layouts/Layouts";
 import ServiceSection from "./sections/ServiceSection/ServiceSection";
 import CategorySection from "./sections/CategorySection/CategorySection";
+import LeadCaptureSection from "./sections/LeadCaptureSection/LeadCaptureSection";
 
 function App() {
   useEffect(() => {
@@ -32,13 +33,16 @@ function App() {
     //
     <>
       {/* Framer Motion transitions between sections */}
-      <Layouts>
-        <ReactLenis root>
-          <Theme>
+      <Theme>
+        <Layouts>
+          <ReactLenis root>
             <motion.div>
               <HeroSection />
               <motion.div>
                 <AboutSection />
+              </motion.div>
+              <motion.div>
+                <LeadCaptureSection />
               </motion.div>
               <motion.div>
                 <CategorySection />
@@ -50,9 +54,9 @@ function App() {
                 <FooterSections />
               </motion.div>
             </motion.div>
-          </Theme>
-        </ReactLenis>
-      </Layouts>
+          </ReactLenis>
+        </Layouts>
+      </Theme>
     </>
   );
 }
