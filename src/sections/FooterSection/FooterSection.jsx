@@ -39,7 +39,7 @@ function FooterSection() {
       <div
         className=" flex flex-col lg:flex-row items-center justify-center bg-gray-50 w-full min-h-[300px] text-white sticky top- z-10"
         style={{
-          backgroundImage: "url('/images/footerbg.png')",
+          backgroundImage: "url('/images/footerbg.webp')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

@@ -3,15 +3,7 @@ import TailwindButton from "../../components/TailwindButton";
 import { motion, AnimatePresence } from "framer-motion";
 // 1. IMPORT Firestore functions and your DB reference
 import { db } from "../../configs/firebase"; // Adjust path as necessary
-import {
-  collection,
-  addDoc,
-  Timestamp,
-  query,
-  where,
-  getDocs,
-  limit,
-} from "firebase/firestore";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 function LeadCaptureSection() {
   const [name, setName] = useState("");
@@ -63,34 +55,16 @@ function LeadCaptureSection() {
     }
 
     try {
+      // No duplicate check, just add the new lead
       const leadsRef = collection(db, "lunchboxleads");
-      const queries = [];
-      if (email.trim()) {
-        queries.push(where("email", "==", email.trim()));
-      }
-      if (phoneNumber.trim()) {
-        queries.push(where("phoneNumber", "==", phoneNumber.trim()));
-      }
-
-      const q = query(leadsRef, ...queries, limit(1));
-      const querySnapshot = await getDocs(q);
-
-      if (!querySnapshot.empty) {
-        // Duplicate found
-        setSuccessMessage(
-          "We found you! You are already on our notification list. Thank you!"
-        );
-      } else {
-        // No duplicate, add new lead
-        const leadData = {
-          name: name.trim(),
-          email: email.trim() || null,
-          phoneNumber: phoneNumber.trim() || null,
-          createdAt: Timestamp.now(),
-        };
-        await addDoc(leadsRef, leadData);
-        setSuccessMessage("Thank you! We'll notify you at launch.");
-      }
+      const leadData = {
+        name: name.trim(),
+        email: email.trim() || null,
+        phoneNumber: phoneNumber.trim() || null,
+        createdAt: Timestamp.now(),
+      };
+      await addDoc(leadsRef, leadData);
+      setSuccessMessage("Thank you! We'll notify you at launch.");
 
       setShowSuccessScreen(true);
       setName("");
@@ -110,7 +84,7 @@ function LeadCaptureSection() {
       className="my-10 py-16 px-6 md:px-16 rounded-3xl flex flex-col items-center justify-center min-h-[90vh]"
       style={{
         backgroundColor: "var(--color-background)",
-        backgroundImage: "url(./images/leadGenerateBG.png)",
+        backgroundImage: "url(./images/leadGenerateBG.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -231,7 +205,7 @@ function LeadCaptureSection() {
                     disabled={loading}
                   />
                 </div>
-               
+
                 <div className="w-full flex flex-col gap-1">
                   <label
                     htmlFor="phone"
