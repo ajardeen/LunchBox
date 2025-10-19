@@ -27,22 +27,22 @@ function HeroSection() {
           {/* Left: Text Section */}
           <div className="relative z-10 flex-1 w-full md:w-[55%] text-center md:text-left p-6 sm:p-10 space-y-6 md:-mr-20">
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-6xl font-extrabold font-runde text-gray-900 leading-tight">
-              Fuel Your <br /> Chennai Grind
-              <br className="block" /> with Legendary Lunch.
+              Fuel Your <br className="hidden lg:block" /> Chennai Grind
+              <br className="hidden lg:block" /> with Legendary Lunch.
             </h1>
-            <p className="text-gray-700 text-base sm:text-sm leading-relaxed max-w-xl mx-auto md:mx-0">
+            <p className="text-gray-700 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto md:mx-0">
               <span className="text-xl font-bold text-primary">
-                சுவை! & ஆரோக்கியம்!
-              </span>{" "}
+                சுவை! & ஆரோக்கியம் 
+              </span>{" "} <br />
               Stop stressing about lunch. Lunchbox Legends brings you
               subscription-based lunchboxes, freshly prepared with that
               authentic, home-cooked flavor. Perfect for IT Professionals,
               Hostel Residents, and Seniors in Chennai. It's the real
-              deal—convenient and delicious.
+              deal convenient and delicious.
             </p>
 
-            <TailwindButton onClick={scrollToLeadCapture}>
-              Register Now
+            <TailwindButton onClick={scrollToLeadCapture} className="text-xs lg:text-sm place-self-center md:place-self-start">
+              Get Your Lunchbox Now
             </TailwindButton>
           </div>
 
@@ -51,7 +51,7 @@ function HeroSection() {
             <img
               src="/images/hero_pan_img.webp"
               alt="Healthy Meal"
-              className="w-full h-[350px] sm:h-[450px] md:h-[600px] object-cover opacity-90 rounded-2xl"
+              className="w-full h-[350px] sm:h-[450px] md:h-[600px] object-contain scale-125 opacity-100 rounded-2xl"
             />
           </div>
         </div>

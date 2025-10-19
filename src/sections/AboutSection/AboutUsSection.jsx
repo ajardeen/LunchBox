@@ -10,15 +10,14 @@ const AboutUsSection = () => {
           </span>
 
           <h1 className="text-4xl sm:text-4xl lg:text-4xl font-bold tracking-tight leading-none mb-6 text-foreground">
-            OUR BELIEF: QUALITY FUEL, QUALITY LIFE.
+            Real Food. Real Energy. Real Chennai.
           </h1>
 
           <p className="text-base font-normal lg:mb-10 max-w-md text-muted">
-            We see food as more than just sustenance—it's the foundation of your
-            energy, focus, and happiness. We are dedicated to creating a
-            subscription experience that delivers authentic, hygienic, and
-            home-cooked goodness right to you. Our goal is simple: to make
-            healthy eating a joyful, consistent part of your busy Chennai life.
+            We believe good food fuels great days. That’s why we craft hygienic,
+            home-style meals made with fresh local ingredients — delivered right
+            to your desk or doorstep. Our mission? To make eating healthy
+            effortless and enjoyable, every single day.
           </p>
 
           {/* <TailwindButton>GET STARTED</TailwindButton> */}
@@ -30,10 +29,9 @@ const AboutUsSection = () => {
               FARM-TO-LUNCHBOX FRESHNESS
             </h3>
             <p className="text-sm font-normal text-muted">
-              We believe the best meals start with the best produce. We source
-              our ingredients locally whenever possible, ensuring peak flavor
-              and supporting Chennai's community farmers. This dedication
-              guarantees a difference you can taste.
+              Locally sourced. Naturally flavorful. We partner with Chennai’s
+              farmers to bring you peak-fresh ingredients that make every bite
+              taste better.
             </p>
           </div>
 
@@ -42,10 +40,8 @@ const AboutUsSection = () => {
               SEAMLESS DAILY DELIVERY
             </h3>
             <p className="text-sm font-normal text-muted">
-              Forget the hassle of packing, ordering, or rushing out. Your
-              authentic, home-cooked lunch arrives at your doorstep or office—on
-              time, every time. Our subscription model is built for your busy
-              schedule, giving you one less thing to worry about.
+              No cooking, no chaos. Just reliable, on-time lunchboxes that fit
+              your busy schedule — so you can focus on what matters.
             </p>
           </div>
 
@@ -54,10 +50,8 @@ const AboutUsSection = () => {
               AUTHENTIC TASTE, PERFECTLY BALANCED
             </h3>
             <p className="text-sm font-normal text-muted">
-              We've mastered the art of making healthy food taste like home. Our
-              chefs craft meals that are rich in authentic flavors (சுவை) while
-              ensuring they meet the nutritional standards (ஆரோக்யம்) that keep
-              you energized and focused all afternoon.
+              Home-style recipes, crafted with care. Every meal brings you the
+              perfect mix of சுவை (taste) and ஆரோக்கியம் (health).
             </p>
           </div>
 
@@ -66,10 +60,8 @@ const AboutUsSection = () => {
               FLEXIBLE PLANS TO FIT YOUR LIFE
             </h3>
             <p className="text-sm font-normal text-muted">
-              No two legends are the same. We offer a variety of customizable
-              subscription plans to accommodate your dietary restrictions,
-              preferences, and schedule. Need a meal only three days a week?
-              Vegetarian options? We have a plan designed just for you.
+              Whether you eat light, go veg, or just want lunch a few days a
+              week — we’ve got a plan that fits your rhythm.
             </p>
           </div>
         </div>
