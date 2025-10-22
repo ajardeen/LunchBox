@@ -104,28 +104,28 @@ function FooterSection() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-3 sm:gap-8 text-sm mb-6">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=123+Healthy+Street,+Food+City,+India"
-              target="_blank"
+              // href="https://www.google.com/maps/search/?api=1&query=123+Healthy+Street,+Food+City,+India" 
+              // target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <IoLocationSharp />
-              <span>123 Healthy Street, Food City, India</span>
+              <span>Injambakkanm ECR</span>
             </a>
             <a
-              href="mailto:contact@lunchboxlegends.com"
+              href="mailto:lunchboxlegends9@gmail.com"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <MdEmail />
-              <span>contact@lunchboxlegends.com</span>
+              <span>lunchboxlegends9@gmail.com</span>
             </a>
-            <a
+            {/* <a
               href="tel:+919876543210"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <FaPhone />
               <span>+91 98765 43210</span>
-            </a>
+            </a> */}
           </div>
           {/* Copyright */}
           <div className="text-center text-xs sm:text-sm pt-2 border-t border-white border-opacity-30 mt-4 w-full">
