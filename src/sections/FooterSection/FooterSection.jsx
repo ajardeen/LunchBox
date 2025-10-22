@@ -110,7 +110,7 @@ function FooterSection() {
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <IoLocationSharp />
-              <span>Injambakkanm ECR</span>
+              <span>Injambakkanm ECR Chennai</span>
             </a>
             <a
               href="mailto:lunchboxlegends9@gmail.com"
