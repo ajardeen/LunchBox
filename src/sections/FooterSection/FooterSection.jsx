@@ -119,13 +119,13 @@ function FooterSection() {
               <MdEmail />
               <span>lunchboxlegends9@gmail.com</span>
             </a>
-            {/* <a
-              href="tel:+919876543210"
+            <a
+              href="tel:+919790455288"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <FaPhone />
-              <span>+91 98765 43210</span>
-            </a> */}
+              <span>+91 97904 55288</span>
+            </a>
           </div>
           {/* Copyright */}
           <div className="text-center text-xs sm:text-sm pt-2 border-t border-white border-opacity-30 mt-4 w-full">
