@@ -71,7 +71,7 @@ function TopNav() {
             href="https://www.instagram.com/lunchbox__legends"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex border text-sm p-1 px-2 rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
+            className="flex border text-sm p-1 px-5 py-2 rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
           >
             <BsInstagram />
             <span className="">@lunchbox__legends</span>
@@ -123,7 +123,7 @@ function TopNav() {
             href="https://www.instagram.com/lunchbox__legends"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex border text-sm p-1 px-2 w-fit rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
+            className="flex  text-sm  w-fit rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
           >
             <BsInstagram />
             <span className="">@lunchbox__legends</span>

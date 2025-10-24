@@ -136,7 +136,7 @@ function FooterSection() {
                 href="https://www.instagram.com/lunchbox__legends"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity  "
               >
                 <BsInstagram />
                 <span>@lunchbox__legends</span>
