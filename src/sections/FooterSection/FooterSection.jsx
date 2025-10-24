@@ -3,6 +3,7 @@ import TailwindButton from "../../components/TailwindButton";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { useLenis } from "lenis/react";
+import { BsInstagram } from "react-icons/bs";
 
 const navLinks = [
   { name: "Home", href: "#herosection" },
@@ -89,7 +90,7 @@ function FooterSection() {
           />
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm font-medium mb-6">
+          <nav className="flex sm:hidden flex-wrap justify-center gap-4 sm:gap-6 text-sm font-medium mb-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -101,31 +102,46 @@ function FooterSection() {
               </a>
             ))}
           </nav>
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-3 sm:gap-8 text-sm mb-6">
-            <a
-              // href="https://www.google.com/maps/search/?api=1&query=123+Healthy+Street,+Food+City,+India" 
-              // target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-            >
-              <IoLocationSharp />
-              <span>Injambakkanm ECR Chennai</span>
-            </a>
-            <a
-              href="mailto:lunchboxlegends9@gmail.com"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-            >
-              <MdEmail />
-              <span>lunchboxlegends9@gmail.com</span>
-            </a>
-            <a
-              href="tel:+919790455288"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-            >
-              <FaPhone />
-              <span>+91 97904 55288</span>
-            </a>
+          {/* Contact & Socials */}
+          <div className="flex flex-col md:flex-row  items-start justify-center gap-5 sm:gap-20 text-sm mb-6">
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-col items-start justify-center text-left sm:text-left gap-3 sm:gap-3">
+              <span className="font-bold">Connect with us:</span>
+              <a
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <IoLocationSharp />
+                <span>Injambakkanm ECR Chennai</span>
+              </a>
+              <a
+                href="mailto:lunchboxlegends9@gmail.com"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <MdEmail />
+                <span>lunchboxlegends9@gmail.com</span>
+              </a>
+              <a
+                href="tel:+919790455288"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <FaPhone />
+                <span>+91 97904 55288</span>
+              </a>
+            </div>
+            {/* Socials */}
+            <div className="flex flex-col items-left gap-2">
+              <span className="font-bold">Follow us:</span>
+              <a
+                href="https://www.instagram.com/lunchbox__legends"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <BsInstagram />
+                <span>@lunchbox__legends</span>
+              </a>
+            </div>
           </div>
           {/* Copyright */}
           <div className="text-center text-xs sm:text-sm pt-2 border-t border-white border-opacity-30 mt-4 w-full">

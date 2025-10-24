@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 import { useLenis } from "lenis/react";
 import { motion, AnimatePresence } from "framer-motion";
+import { BsInstagram } from "react-icons/bs";
 
 const navLinks = [
   { name: "Home", href: "#herosection" },
@@ -64,9 +65,21 @@ function TopNav() {
             {link.name}
           </a>
         ))}
+        <div className="flex flex-col items-left gap-2">
+          {/* <span className="font-bold">Follow us:</span> */}
+          <a
+            href="https://www.instagram.com/lunchbox__legends"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex border text-sm p-1 px-2 rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
+          >
+            <BsInstagram />
+            <span className="">@lunchbox__legends</span>
+          </a>
+        </div>
         <button
           onClick={(e) => handleSmoothScroll(e, "#leadcapturesection")}
-          className="ml-4 bg-[var(--color-accent)] text-[var(--color-background)] px-5 py-2 rounded-full font-medium hover:brightness-110 transition"
+          className=" bg-[var(--color-accent)] text-[var(--color-background)] px-5 py-2 rounded-full font-medium hover:brightness-110 transition"
         >
           Register Now
         </button>
@@ -104,6 +117,18 @@ function TopNav() {
                 {link.name}
               </a>
             ))}
+             <div className="flex  items-left gap-5 mb-5">
+          <span className="font-bold">Follow us:</span>
+          <a
+            href="https://www.instagram.com/lunchbox__legends"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex border text-sm p-1 px-2 w-fit rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
+          >
+            <BsInstagram />
+            <span className="">@lunchbox__legends</span>
+          </a>
+        </div>
             <button
               onClick={(e) => handleSmoothScroll(e, "#leadcapturesection")}
               className="w-full bg-[var(--color-accent)] text-[var(--color-background)] px-5 py-2 rounded-full font-medium hover:brightness-110 transition"

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 // 1. IMPORT Firestore functions and your DB reference
 import { db } from "../../configs/firebase"; // Adjust path as necessary
 import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { BsInstagram } from "react-icons/bs";
 
 function LeadCaptureSection() {
   const [name, setName] = useState("");
@@ -114,6 +115,19 @@ function LeadCaptureSection() {
               >
                 {successMessage}
               </p>
+                {/* Socials */}
+            <div className="flex flex-col items-left gap-2 pb-10">
+              <span className="font-bold">Follow us:</span>
+              <a
+                href="https://www.instagram.com/lunchbox__legends"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex border p-1 px-2 rounded-full hover:bg-pink-50 items-center gap-2 hover:opacity-80 transition-opacity text-pink-800"
+              >
+                <BsInstagram />
+                <span className="">@lunchbox__legends</span>
+              </a>
+            </div>
               <TailwindButton onClick={() => setShowSuccessScreen(false)}>
                 Register Another
               </TailwindButton>
