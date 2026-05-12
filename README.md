@@ -59,3 +59,64 @@ src/
 ├── config/firebase
 ├── hooks/
 └── layouts/
+```
+# Installation
+Clone the repository:
+
+```bash
+git clone https://github.com/ajardeen/LunchBox.git
+
+```
+
+Navigate to the project folder:
+
+```bash
+cd LunchBox
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# Build for Production
+
+Build the application:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+# Environment Variables Setup
+
+Create a `.env` file in the root directory and add the following Firebase configuration:
+
+```env
+# Essential Firebase Configuration
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_APP_ID=
+
+# Optional, but keep with the rest for consistency
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_MEASUREMENT_ID=
+```
