@@ -26,7 +26,6 @@ All pre-registration data is securely stored using Firebase and can be monitored
 - React 19
 - Vite
 - Tailwind CSS v4
-- Radix UI
 - Framer Motion
 - Lenis Smooth Scroll
 
