@@ -1,16 +1,62 @@
-# React + Vite
+# LunchBox Legends - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LunchBox Legends is a modern promotional landing page built to showcase the LunchBox Legends platform before the official product launch.  
 
-Currently, two official plugins are available:
+The website allows customers to:
+- Learn about the product
+- Explore features and branding
+- Pre-register before launch
+- Get notified when the platform officially goes live
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+All pre-registration data is securely stored using Firebase and can be monitored through the Vabook Business Portal admin system.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Live Demo
 
-## Expanding the ESLint configuration
+- Website: https://lunchboxlegends.netlify.app/
+- GitHub Repository: https://github.com/ajardeen/LunchBox
+- Vabook Business Portal: https://github.com/ajardeen/vabook_business_portal
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# Tech Stack
+
+## Frontend
+- React 19
+- Vite
+- Tailwind CSS v4
+- Radix UI
+- Framer Motion
+- Lenis Smooth Scroll
+
+## Backend / Database
+- Firebase
+
+---
+
+# Features
+
+- Modern responsive landing page
+- Smooth scrolling experience
+- Animated UI interactions
+- Product showcase sections
+- Customer pre-registration system
+- Firebase database integration
+- Launch notification collection
+- Admin monitoring through Vabook Business Portal
+- Mobile-friendly design
+
+---
+
+# Project Structure
+
+```bash
+src/
+│
+├── components/
+├── sections/
+├── assets/
+├── config/firebase
+├── hooks/
+└── layouts/
